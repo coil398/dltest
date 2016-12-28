@@ -10,7 +10,7 @@ from keras.models import Sequential
 def build_deep_cnn(num_classes=3):
     model = Sequential()
 
-    model.add(Convolution2D(196, 3, 3, border_mode='same', input_shape=(112, 112, 1)))
+    model.add(Convolution2D(196, 3, 3, border_mode='same', input_shape=(1, 112, 112)))
     model.add(Activation('relu'))
 
     model.add(Convolution2D(256, 3, 3))
