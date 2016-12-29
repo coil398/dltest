@@ -13,7 +13,6 @@ def build_deep_cnn(num_classes=3):
     model.add(Convolution2D(112, 4, 4, border_mode='same', input_shape=(112, 112, 1)))
     model.add(Activation('relu'))
 
-    """
     model.add(Convolution2D(256, 3, 3))
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -26,8 +25,6 @@ def build_deep_cnn(num_classes=3):
     model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Dropout(0.5))
-
-"""
 
     model.add(Flatten())
     model.add(Dense(1024))
